@@ -4,24 +4,24 @@ This document contains all the relevant architecture which will be required duri
 
 ---
 
-# **Ops Repository Workflow **
+# **Ops Repository Workflow**
 ---
 
-![Ops Repo](/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---figure---dOlcG510uDf4MQ7KhwuJX---figure----zv3QYLcmCxA05CgrrnVFQ.png "Ops Repo")
-
----
-
-# **Dev  Repository Workflow **
----
-
-![Dev Repo](/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---figure---pYsRrKVhSIbnHEq9nszU6---figure---kM5RUrUx8BehzdWnYzKm4g.png "Dev Repo")
+![Ops Repo](/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---figure---q2Ey5mpzfdg6BcwrjrykV---figure----zv3QYLcmCxA05CgrrnVFQ.png "Ops Repo")
 
 ---
 
-# **K8S  Application Architecture **
+# **Dev  Repository Workflow**
 ---
 
-![K8S Architecture](/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---figure----Zfvjf7icrfmW53673PNg---figure---LYKWlm7KvjtTRTsg2RFhpQ.png "K8S Architecture")
+![Dev Repo](/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---figure---jkZ0uBeG_sr_RpouNGeJ2---figure---kM5RUrUx8BehzdWnYzKm4g.png "Dev Repo")
+
+---
+
+# **K8S  Application Architecture**
+---
+
+![K8S Architecture](/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---figure---XRZN7UAeCisu5EMJwvZ6N---figure---LYKWlm7KvjtTRTsg2RFhpQ.png "K8S Architecture")
 
 
 
