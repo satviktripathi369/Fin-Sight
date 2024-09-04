@@ -1,0 +1,48 @@
+cloud-architecture-diagram
+
+Title Ops Repo Workflow
+// direction right
+
+CICD Pipeline [color: purple, icon: git-merge, label: CD-Pipeline] {
+  GitHub Actions [icon: github-actions]
+  Terraform [icon: terraform]
+}
+
+AWS Infrastructure [color: orange, icon: aws] {
+  AWS EKS Cluster [icon: aws-eks] // entry point
+  AWS ECR [icon: aws-ecr]
+  Kubernetes Cluster [icon: kubernetes , color: blue] {
+    Kubernetes [icon: k8s-kubernetes]
+    ArgoCD [icon: crosshair]
+  }
+  Helm Charts [icon: helm]
+}
+
+Response [icon: gmail]
+Review Team [icon: Users]
+Developer [icon: user]
+Stage [icon: git-branch]
+Main [icon: git-branch]
+PR [icon: git-pull-request]
+
+Ops Repo [icon: github]
+
+GitHub Actions > Terraform
+Terraform > AWS EKS Cluster : Branch==Main? Apply
+AWS EKS Cluster > Kubernetes Cluster
+Kubernetes > Helm Charts
+AWS ECR <> ArgoCD 
+
+Ops Repo  > GitHub Actions : Workflow
+
+Developer <> Ops Repo : Clones
+Developer > Stage :Commit
+Stage > CICD Pipeline :Triggers
+Developer,Stage  > PR :Raises  
+PR > Main  : Merges
+Main > CICD Pipeline
+PR <> Review Team :Review
+ArgoCD <> Kubernetes
+
+CICD Pipeline > Response
+
