@@ -1,0 +1,50 @@
+cloud-architecture-diagram
+
+Title Dev Repo Workflow
+direction right
+
+CICD Pipeline [color: purple, icon: git-merge , label: CI-Pipeline] {
+  GitHub Actions [icon: github-actions]
+  Ubuntu [icon: ubuntu , color: yellow] {
+      Docker [icon: Docker]
+      K8S Manifest[icon: file-code, label: Helm-charts]
+      NodeBuilder [icon: npm]
+      PythonBuilder [icon: python]
+  }
+}
+
+AWS Infrastructure [color: orange, icon: aws] {
+  AWS ECR [icon: aws-ecr] // entry point
+}
+EKS Cluster [icon: aws-eks, color:blue]{
+  K8S Cluster [icon: k8s-kubernetes]
+  ArgoCD[icon: crosshair]
+}
+
+Response [icon: gmail]
+Review Team [icon: Users]
+Developer [icon: user]
+Stage [icon: git-branch]
+Main [icon: git-branch]
+PR [icon: git-pull-request]
+
+Dev Repo [icon: github]
+
+GitHub Actions > Ubuntu
+Docker > AWS ECR: Branch==Main? Publish
+
+
+Dev Repo  > CICD Pipeline
+
+Developer <> Dev Repo : Clones
+Developer > Stage :Commit
+Stage > CICD Pipeline :Triggers
+Developer,Stage  > PR :Raises  
+PR > Main  : Merges
+Main > CICD Pipeline
+PR <> Review Team :Review
+
+CICD Pipeline > Response
+AWS ECR > ArgoCD 
+ArgoCD <> K8S Cluster : Apply
+K8S Manifest > ArgoCD : Watches

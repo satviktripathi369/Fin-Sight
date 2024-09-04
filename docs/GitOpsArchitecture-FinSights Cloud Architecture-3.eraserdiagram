@@ -1,0 +1,87 @@
+cloud-architecture-diagram
+
+// Title
+title FinSights Cloud Architecture
+direction right
+// Nodes and Groups
+Frontend Service [color: green, icon: nextjs] {
+  Frontend Pod1 [icon: k8s-pod] {
+    Frontend Container[icon: next]
+    RedisCache [icon: redis , label: RedisCache]
+    initConatiner1 [icon: docker, label: initConatiner]
+  }
+  Frontend Pod2[icon: k8s-pod]
+  Frontend Pod3[icon: k8s-pod]
+  Frontend Pod4[icon: k8s-pod]
+  Frontend LB Service [icon: k8s-svc]
+}
+Backend Service [color: green, icon: fastapi] {
+  Backend Pod1 [icon: k8s-pod] {
+    Backend Container[icon: fastapi]
+    RedisCache2 [icon: redis , label: RedisCache]
+    initConatiner2 [icon: docker, label: initConatiner]
+  }
+  Backend Pod2[icon: k8s-pod]
+  Backend Pod3[icon: k8s-pod]
+  Backend Pod4[icon: k8s-pod]
+  Backend LB Service [icon: k8s-svc]
+}
+ML Service [color: green, icon: nextjs] {
+  ML Pod1 [icon: k8s-pod] {
+    ML Container[icon: docker]
+  }
+  ML Pod2[icon: k8s-pod]
+  ML Pod3[icon: k8s-pod]
+  ML Pod4[icon: k8s-pod]
+  ML LB Service [icon: k8s-svc]
+}
+
+ML LB Service > ML Pod1
+ML LB Service > ML Pod2
+ML LB Service > ML Pod3
+ML LB Service > ML Pod4
+
+// Network Load Balancer [icon: aws-elb, label: "Network Load Balancer"]
+
+Ingress Controller [icon: k8s-ing]
+
+ExternalDB [icon: database]{
+  MongoDB [icon: mongodb]
+}
+
+MiddlewareService1 [icon: k8s-svc , label: MiddlewareService]
+MiddlewareService2 [icon: k8s-svc , label: MiddlewareService]
+
+Domain [icon: azure-dns-zones] {
+  DNS [icon: godaddy]
+}
+
+Users [icon: user]{
+  User [icon: user]
+  Mobile [icon: mobile]
+  Desktop [icon: desktop]
+}
+
+
+// Connections
+Backend LB Service <> Backend Pod1
+Backend LB Service <> Backend Pod2
+Backend LB Service <> Backend Pod3
+Backend LB Service <> Backend Pod4
+
+Frontend LB Service <> Frontend Pod1
+Frontend LB Service <> Frontend Pod2
+Frontend LB Service <> Frontend Pod3
+Frontend LB Service <> Frontend Pod4
+
+Frontend Service <> MiddlewareService1 <> Backend Service
+Backend Service <> MiddlewareService2 <> ML Service
+Backend Service > ExternalDB
+
+User > Mobile
+User > Desktop
+Users > Domain
+Domain > Ingress Controller : finsight.com
+Ingress Controller 
+Ingress Controller <> Frontend Service : /home
+Ingress Controller <> Backend Service : /api
