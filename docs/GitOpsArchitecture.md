@@ -7,7 +7,7 @@ This document contains all the relevant architecture which will be required duri
 # **Ops Repository Workflow**
 ---
 
-![Ops Repo](undefined "Ops Repo")
+![Ops Repo](/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---figure---iHfvndB215dhjvtpxCSsv---figure----zv3QYLcmCxA05CgrrnVFQ.png "Ops Repo")
 
 ---
 
@@ -44,8 +44,8 @@ This document contains all the relevant architecture which will be required duri
 <a href="/docs/GitOpsArchitecture-cloud-architecture-1.eraserdiagram" data-element-id="UB8xPeWJ4IulAlhseVYQg"><img src="/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---diagram----2ca323e15368b29a2cda25c18e93d8a4.png" alt="" data-element-id="UB8xPeWJ4IulAlhseVYQg" /></a>
 <a href="/docs/GitOpsArchitecture-cloud-architecture-2.eraserdiagram" data-element-id="i47pWDaq4_2IxBofSLJJj"><img src="/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---diagram----4630ffc0bad7337b330c5b48aba36b18.png" alt="" data-element-id="i47pWDaq4_2IxBofSLJJj" /></a>
 <a href="/docs/GitOpsArchitecture-FinSights Cloud Architecture-3.eraserdiagram" data-element-id="P9qIUj-1QO2GIrqvDRmR8"><img src="/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---diagram----c520c2a8469a1fe02b48304ff855b112-FinSights-Cloud-Architecture.png" alt="" data-element-id="P9qIUj-1QO2GIrqvDRmR8" /></a>
-<a href="/docs/GitOpsArchitecture-Finance Application Flow Chart-4.eraserdiagram" data-element-id="cyQFVigSu7GItHvYOxy65"><img src="undefined" alt="" data-element-id="cyQFVigSu7GItHvYOxy65" /></a>
-<a href="/docs/GitOpsArchitecture-Data Flow Diagram for ML Model-5.eraserdiagram" data-element-id="i-bzwaReQMXaDLhLGVOBG"><img src="undefined" alt="" data-element-id="i-bzwaReQMXaDLhLGVOBG" /></a>
+<a href="/docs/GitOpsArchitecture-Finance Application Flow Chart-4.eraserdiagram" data-element-id="cyQFVigSu7GItHvYOxy65"><img src="/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---diagram----cb5ac3d7c68a6186d037214d22ca221a-Finance-Application-Flow-Chart.png" alt="" data-element-id="cyQFVigSu7GItHvYOxy65" /></a>
+<a href="/docs/GitOpsArchitecture-Data Flow Diagram for ML Model-5.eraserdiagram" data-element-id="i-bzwaReQMXaDLhLGVOBG"><img src="/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---diagram----2437a8b3cbe487776de15d4a44bd6899-Data-Flow-Diagram-for-ML-Model.png" alt="" data-element-id="i-bzwaReQMXaDLhLGVOBG" /></a>
 <!-- end-eraser-additional-files -->
 <!-- end-eraser-additional-content -->
 <!--- Eraser file: https://app.eraser.io/workspace/LfD511dNU0ih821nWkcR --->
