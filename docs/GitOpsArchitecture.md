@@ -7,31 +7,31 @@ This document contains all the relevant architecture which will be required duri
 # **Ops Repository Workflow**
 ---
 
-![Ops Repo](/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---figure---j6afV_ovZyysvw1QnvC1J---figure----zv3QYLcmCxA05CgrrnVFQ.png "Ops Repo")
+![Ops Repo](/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---figure---mGv_QmnzajwHhum4OgfM2---figure----zv3QYLcmCxA05CgrrnVFQ.png "Ops Repo")
 
 ---
 
 # **Dev  Repository Workflow**
 ---
 
-![Dev Repo](undefined "Dev Repo")
+![Dev Repo](/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---figure---XS39SceLha6pEbuYBQ3Jw---figure---kM5RUrUx8BehzdWnYzKm4g.png "Dev Repo")
 
 ---
 
 # **K8S  Application Architecture**
 ---
 
-![K8S Architecture](undefined "K8S Architecture")
+![K8S Architecture](/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---figure---pUUDesf2gPOyw69vzUjLJ---figure---LYKWlm7KvjtTRTsg2RFhpQ.png "K8S Architecture")
 
 ---
 
 # **Information Flow Diagram**
-![Information Flow](undefined "Information Flow")
+![Information Flow](/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---figure---P3rkTwzvnkmqFyiaQhore---figure---jAEOJeIoPor8jaO7ObbpJg.png "Information Flow")
 
 ---
 
 # **Data Flow Diagram**
-![Data Flow](undefined "Data Flow")
+![Data Flow](/.eraser/LfD511dNU0ih821nWkcR___6Ww8hrtkmQbCnRHKqyf4D7Vv51M2___---figure---pB32Gs8xxZntHtZSf5hhV---figure---GHVj-L7VYBc5WKzym57W2g.png "Data Flow")
 
 ---
 
