@@ -1,0 +1,17 @@
+flowchart-diagram
+
+title Finance Application Flow Chart
+
+User Input [shape: oval, icon: user] > Front End [icon: monitor]
+Front End > Send Parameters [shape: rectangle, icon: send]
+Send Parameters > Back End [icon: server]
+Back End > Feed to Model [shape: rectangle, icon: code]
+Feed to Model > ML Model [icon: settings]
+ML Model > Compute Result [shape: rectangle, icon: calculator]
+Compute Result > Store in DB [shape: rectangle, icon: database]
+Store in DB > MongoDB [icon: database]
+Compute Result > Return Result [shape: rectangle, icon: reply]
+Return Result > Front End
+Front End > Display Result [shape: rectangle, icon: eye]
+Display Result > User Input
+

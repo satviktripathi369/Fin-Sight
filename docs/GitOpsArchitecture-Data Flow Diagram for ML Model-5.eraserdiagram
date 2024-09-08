@@ -1,0 +1,40 @@
+flowchart-diagram
+
+title Data Flow Diagram for ML Model
+direction down
+
+// Define groups for better organization
+User Interaction {
+  User [icon: user]
+  Display Result [icon: monitor]
+}
+
+Front End {
+  Front End [icon: layout]
+  Send Parameters [icon: send]
+}
+
+Back End {
+  Back End [icon: server]
+  Feed to Model [icon: database]
+  ML Model [icon: cpu]
+  Compute Result [icon: bar-chart-2]
+  Return Result [icon: arrow-left-circle]
+}
+
+Data Store {
+  MongoDB [icon: database]
+}
+
+// Define the flow
+User > Front End: User Input
+// Front End > User: Send Parameters
+Send Parameters > Back End: Parameters
+Feed to Model > ML Model: Model Data
+ML Model > Compute Result: Computed Data
+Compute Result > MongoDB: Store Data
+Compute Result > Return Result: Results
+Return Result > Front End: Return Results
+Front End > Display Result: Display Results
+Display Result > User: Results
+
