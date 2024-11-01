@@ -4,35 +4,51 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 export default function Home() {
-  const [isMuted, setIsMuted] = useState(true);
-  const [isPlaying, setIsPlaying] = useState(false);
-
   useEffect(() => {
-    const video = document.getElementById('background-video');
-    if (video) {
-      video.muted = true; // Start muted
-    }
+    const menuToggle = document.querySelector('.toggle');
+    const showcase = document.querySelector('.showcase');
+
+    menuToggle?.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      showcase.classList.toggle('active');
+    });
   }, []);
-
-  const toggleMute = () => {
-    const video = document.getElementById('background-video');
-    video.muted = !video.muted;
-    setIsMuted(video.muted);
-  };
-
-  const togglePlay = () => {
-    const video = document.getElementById('background-video');
-    if (video.paused) {
-      video.play();
-      setIsPlaying(true);
-    } else {
-      video.pause();
-      setIsPlaying(false);
-    }
-  };
+  
   return (
+    
     <div className="bg-black min-h-screen">
-      
+      {/* Video Showcase Section */}
+      <section className="showcase relative min-h-screen w-full">
+        <header className="absolute top-0 left-0 w-full flex justify-between items-center p-10 z-10">
+          <h1 className="text-white uppercase text-2xl font-bold cursor-pointer"></h1>
+          <div className="toggle w-12 h-12 bg-cover bg-center cursor-pointer"></div>
+        </header>
+
+        {/* Local Video Integration */}
+        <video
+          src="/CreditCard41sec.mp4"
+          muted
+          loop
+          autoPlay
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-80"
+        ></video>
+
+        <div className="overlay absolute top-0 left-0 w-full h-full bg-blue-500 mix-blend-overlay"></div>
+
+        <div className="text z-10 relative p-10 text-white">
+          <h2 className="text-5xl font-extrabold uppercase leading-tight">Never Stop To</h2>
+          <h3 className="text-4xl font-semibold uppercase">Exploring The World</h3>
+          <p className="mt-6 text-lg max-w-xl">
+            Discover new destinations, explore beautiful resorts, and find your next adventure with ease.
+          </p>
+          <a
+            href="/member-form"
+            className="inline-block mt-6 bg-white text-black py-3 px-6 rounded-full uppercase tracking-wider font-semibold transition-all hover:tracking-widest"
+          >
+            Become a Member 
+          </a>
+        </div>
+      </section>
       <div className="bg-black min-h-screen py-16 px-8">
   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
     
