@@ -2,11 +2,18 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import joblib
 import numpy as np
-
+from fastapi.middleware.cors import CORSMiddleware
 # Load the model
 model = joblib.load("model_DTC.pkl")
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # frontend origin
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Define the input data model that the API expects
 class PredictionInput(BaseModel):

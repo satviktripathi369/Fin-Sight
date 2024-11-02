@@ -1,0 +1,58 @@
+{
+  "AndhraPradesh": [
+    "Amaravati",
+    "Visakhapatnam",
+    "Vijayawada",
+    "Tirupati",
+    "Guntur"
+  ],
+  "ArunachalPradesh": ["Itanagar", "Naharlagun", "Pasighat", "Tezpur", "Ziro"],
+  "Assam": ["Dispur", "Guwahati", "Silchar", "Dibrugarh", "Nagaon"],
+  "Bihar": ["Patna", "Gaya", "Bhagalpur", "Muzzafarpur", "Darbhanga"],
+  "Chhattisgarh": ["Raipur", "Bilaspur", "Durg", "Korba", "Jagdalpur"],
+  "Goa": ["Panaji", "Margao", "Mapusa", "Ponda", "Vasco da Gama"],
+  "Gujarat": ["Gandhinagar", "Ahmedabad", "Surat", "Vadodara", "Rajkot"],
+  "Haryana": ["Chandigarh", "Faridabad", "Gurgaon", "Panipat", "Hisar"],
+  "HimachalPradesh": ["Shimla", "Dharamshala", "Kullu", "Manali", "Solan"],
+  "Jharkhand": ["Ranchi", "Jamshedpur", "Dhanbad", "Bokaro", "Deoghar"],
+  "Karnataka": ["Bengaluru", "Mysuru", "Mangalore", "Hubli", "Davanagere"],
+  "Kerala": [
+    "Thiruvananthapuram",
+    "Kochi",
+    "Kozhikode",
+    "Kottayam",
+    "Thrissur"
+  ],
+  "MadhyaPradesh": ["Bhopal", "Indore", "Gwalior", "Jabalpur", "Ujjain"],
+  "Maharashtra": ["Mumbai", "Pune", "Nagpur", "Nashik", "Aurangabad"],
+  "Manipur": ["Imphal", "Thoubal", "Kakching", "Churachandpur", "Senapati"],
+  "Meghalaya": ["Shillong", "Tura", "Jowai", "Nongpoh", "Williamnagar"],
+  "Mizoram": ["Aizawl", "Lunglei", "Saiha", "Champhai", "Mamit"],
+  "Nagaland": ["Kohima", "Dimapur", "Mokokchung", "Tuensang", "Wokha"],
+  "Odisha": ["Bhubaneswar", "Cuttack", "Rourkela", "Sambalpur", "Berhampur"],
+  "Punjab": ["Chandigarh", "Amritsar", "Ludhiana", "Jalandhar", "Patiala"],
+  "Rajasthan": ["Jaipur", "Udaipur", "Jodhpur", "Ajmer", "Bikaner"],
+  "Sikkim": ["Gangtok", "Namchi", "Mangan", "Gyalshing", "Rangpo"],
+  "TamilNadu": ["Chennai", "Coimbatore", "Madurai", "Tiruchirappalli", "Salem"],
+  "Telangana": ["Hyderabad", "Warangal", "Nizamabad", "Khammam", "Karimnagar"],
+  "Tripura": ["Agartala", "Udaipur", "Dharmanagar", "Ambassa", "Sabroom"],
+  "UttarPradesh": ["Lucknow", "Kanpur", "Agra", "Varanasi", "Meerut"],
+  "Uttarakhand": ["Dehradun", "Haridwar", "Nainital", "Rudrapur", "Roorkee"],
+  "WestBengal": ["Kolkata", "Siliguri", "Howrah", "Durgapur", "Asansol"],
+  "JammuAndKashmir": ["Srinagar", "Jammu", "Anantnag", "Baramulla", "Kathua"],
+  "Ladakh": ["Leh", "Kargil", "Nubra Valley", "Zanskar", "Sham Valley"],
+  "AndamanAndNicobar": [
+    "Port Blair",
+    "Havelock Island",
+    "Neil Island",
+    "Diglipur",
+    "Rangat"
+  ],
+  "DadraAndNagarHaveliAndDamanAndDiu": [
+    "Daman",
+    "Diu",
+    "Silvassa",
+    "Dadra",
+    "Nagar Haveli"
+  ]
+}
