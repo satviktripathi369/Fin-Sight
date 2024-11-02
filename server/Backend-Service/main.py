@@ -6,6 +6,7 @@ import json
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from dotenv import load_dotenv
+from fastapi.middleware.cors import CORSMiddleware
 
 # Load environment variables from .env file
 load_dotenv()
@@ -29,6 +30,14 @@ if REDIS_HOST and REDIS_PORT:
 
 # FastAPI app setup
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # frontend origin
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Define the input data model
 class PredictionInput(BaseModel):
