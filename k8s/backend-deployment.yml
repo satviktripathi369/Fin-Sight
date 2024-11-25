@@ -19,10 +19,23 @@ spec:
         - containerPort: 8001
         env:
         - name: REDIS_HOST
-          value: redis
+          valueFrom:
+            configMapKeyRef:
+              name: backend-config
+              key: REDIS_HOST
         - name: REDIS_PORT
-          value: "6379"
+          valueFrom:
+            configMapKeyRef:
+              name: backend-config
+              key: REDIS_PORT
         - name: ML_SERVICE_URL
-          value: "http://ml.default.svc.cluster.local:8000/predict"
+          valueFrom:
+            configMapKeyRef:
+              name: backend-config
+              key: ML_SERVICE_URL
         - name: CACHE_TIMEOUT
-          value: "60"
+          valueFrom:
+            configMapKeyRef:
+              name: backend-config
+              key: CACHE_TIMEOUT
+
