@@ -20,6 +20,23 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Docker
+
+>Docker Build
+```
+docker build -t frontend .
+```
+
+>Docker Create Network
+```
+docker network create finsight
+```
+
+>Docker run
+```
+docker run -p 5000:5000 --name frontend --network finsight -e NEXT_PUBLIC_API_URL=http://backend:8001 frontend
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
