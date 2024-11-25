@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./client
+    container_name: frontend
+    ports:
+      - "5000:5000"
+    networks:
+      - finsight
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:8001
+
+  backend:
+    build:
+      context: ./server/Backend-Service
+    container_name: backend
+    ports:
+      - "8001:8001"
+    networks:
+      - finsight
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - ML_SERVICE_URL=http://ml:8000/predict
+      - CACHE_TIMEOUT=60
+
+  ml:
+    build:
+      context: ./server/ML-Service
+    container_name: ml
+    ports:
+      - "8000:8000"
+    networks:
+      - finsight
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - finsight
+
+networks:
+  finsight:
+    driver: bridge
