@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ml
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ml
+  template:
+    metadata:
+      labels:
+        app: ml
+    spec:
+      containers:
+      - name: ml
+        image: manavkhandurie/finsights:MLService-v1.0.0
+        ports:
+        - containerPort: 8000
