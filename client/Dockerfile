@@ -1,40 +1,70 @@
-# Stage 1: Build the Next.js project
-FROM node:18-alpine AS builder
+# Official Node.js LTS base image
+FROM node:20.12.2-alpine as builder
 
-# Set working directory
+# Set the working directory
 WORKDIR /app
 
-# Copy package.json and lock file to install dependencies
-COPY package*.json ./
+# Define ARG variables with BAKED_ prefix for each environment variable
+ARG NEXT_PUBLIC_API_URL=BAKED_NEXT_PUBLIC_API_URL
 
-# Install only production dependencies
-RUN npm install --production
-
-# Copy the rest of the application code
+COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* .npmrc* ./
+RUN \
+  if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
+  elif [ -f package-lock.json ]; then npm ci; \
+  elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm i --frozen-lockfile; \
+  else echo "Lockfile not found." && exit 1; \
+  fi
+# Copy the rest of your app's source code
 COPY . .
 
-# Build the Next.js application
-RUN npm run build
+RUN \
+  if [ -f yarn.lock ]; then yarn run build; \
+  elif [ -f package-lock.json ]; then npm run build; \
+  elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm run build; \
+  else echo "Lockfile not found." && exit 1; \
+  fi
+# Start a new stage from the minimal base image
+FROM node:20.12.2-alpine
 
-# Stage 2: Create a lightweight production image
-FROM node:18-alpine AS runner
-
-# Set working directory
 WORKDIR /app
 
-# Copy only necessary files from builder stage
-COPY --from=builder /app/package*.json ./
+# Copy build artifacts and lock files conditionally using patterns
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/yarn*.lock* ./yarn.lock 
+COPY --from=builder /app/package-lock*.json ./package-lock.json  
+COPY --from=builder /app/pnpm-lock*.yaml ./pnpm-lock.yaml 
 
-# Set environment variables for Next.js
-ENV NODE_ENV production
-ENV PORT 3000
-ENV NEXT_PUBLIC_API_URL='http://localhost:8001'
+# Create a new directory for custom scripts
+RUN mkdir -p /var/local
 
-# Expose the port
-EXPOSE 3000
+# Copy the script into the correct location
+COPY entrypoint.sh /var/local/entrypoint.sh
 
-# Start the application
-CMD ["npm", "run", "start"]
+# Install necessary packages
+USER root
+RUN apk update && apk add bash
+
+# Create a non-root user and switch to it
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+RUN chown -R appuser:appgroup /app
+RUN chmod +x /var/local/entrypoint.sh
+
+USER appuser
+
+# Install production dependencies
+RUN \
+  if [ -f yarn.lock ]; then yarn install; \
+  elif [ -f package-lock.json ]; then npm install; \
+  elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm install; \
+  else echo "cant install" && exit 1; \
+  fi
+# Expose the port Next.js runs on
+EXPOSE 5000
+
+# Set entrypoint to run entrypoint.sh
+ENTRYPOINT ["/bin/bash", "/var/local/entrypoint.sh"]
+
+# CMD to start the app
+CMD ["yarn", "start", "-p", "5000"]
