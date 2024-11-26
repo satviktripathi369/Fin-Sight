@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: backend-config
 data:
-  REDIS_HOST: redis
+  REDIS_HOST: redis-cluster-master.default.svc.cluster.local
   REDIS_PORT: "6379"
   ML_SERVICE_URL: "http://ml.default.svc.cluster.local:8000/predict"
   CACHE_TIMEOUT: "60"
