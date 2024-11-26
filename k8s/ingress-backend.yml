@@ -1,9 +1,9 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: app-ingress
+  name: app-ingress-api-backend
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /$2  # Rewrite for /api path
 spec:
   ingressClassName: nginx
   rules:
@@ -17,11 +17,4 @@ spec:
             name: backend
             port:
               number: 8001
-      - path: /  # All other requests go to frontend
-        pathType: Prefix
-        backend:
-          service:
-            name: frontend
-            port:
-              number: 5000
 
