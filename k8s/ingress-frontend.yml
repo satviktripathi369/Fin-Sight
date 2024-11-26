@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-ingress-frontend
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /  # Default rewrite for other paths
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: finsights.proddeploy.xyz
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend
+            port:
+              number: 5000
+

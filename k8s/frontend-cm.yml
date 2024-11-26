@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: frontend-config
 data:
-  NEXT_PUBLIC_API_URL: http://backend.default.svc.cluster.local:8001
+  NEXT_PUBLIC_API_URL: http://finsights.proddeploy.xyz/api
