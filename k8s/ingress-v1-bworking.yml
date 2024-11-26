@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: app-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /$2  # Adjust the target as needed
 spec:
   ingressClassName: nginx
   rules:
@@ -17,11 +17,10 @@ spec:
             name: backend
             port:
               number: 8001
-      - path: /  # All other requests go to frontend
+      - path: /  
         pathType: Prefix
         backend:
           service:
             name: frontend
             port:
               number: 5000
-
