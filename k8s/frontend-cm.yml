@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: frontend-config
 data:
-  NEXT_PUBLIC_API_URL: http://finsights.proddeploy.xyz/api
+  NEXT_PUBLIC_API_URL: https://finsights.proddeploy.xyz/api
