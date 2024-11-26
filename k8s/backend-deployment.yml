@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: manavkhandurie/finsights:BackendService-v1.0.0
+        ports:
+        - containerPort: 8001
+        env:
+        - name: REDIS_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: backend-config
+              key: REDIS_HOST
+        - name: REDIS_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: backend-config
+              key: REDIS_PORT
+        - name: ML_SERVICE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: backend-config
+              key: ML_SERVICE_URL
+        - name: CACHE_TIMEOUT
+          valueFrom:
+            configMapKeyRef:
+              name: backend-config
+              key: CACHE_TIMEOUT
+
