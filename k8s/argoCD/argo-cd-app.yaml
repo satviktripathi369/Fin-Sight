@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: finsights-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Manav-Khandurie/Fin-Sight.git 
+    targetRevision: main
+    path: k8s/helm/finsights
+    helm:
+      valueFiles:
+        - values.yaml  # If you have custom Helm values
+  destination:
+    server: https://kubernetes.default.svc  # Your Kubernetes cluster's API server
+    namespace: default
+  syncPolicy:
+    automated:  # Auto-sync the app
+      prune: true  # Automatically delete resources when they are removed from Git
+      selfHeal: true  # Automatically sync to Git repository state
+
