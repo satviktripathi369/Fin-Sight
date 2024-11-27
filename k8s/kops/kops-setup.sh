@@ -10,6 +10,8 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 
 kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.12.1/cert-manager.yaml
 
+helm install redis-cluster bitnami/redis --set architecture=replication,auth.enabled=false
+
 kubectl get svc -n ingress-nginx
 
 kubectl get pods -n cert-manager
