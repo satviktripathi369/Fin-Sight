@@ -1,0 +1,43 @@
+namespace: default
+
+ml:
+  name: ml
+  replicas: 3
+  image: manavkhandurie/finsights:MLService-v1.0.0
+  port: 8000
+
+redis:
+  host: redis-cluster-master
+  port: 6379
+
+backend:
+  name: backend
+  replicas: 3
+  image: manavkhandurie/finsights:BackendService-v1.0.0
+  port: 8001
+
+frontend:
+  name: frontend
+  replicas: 3
+  image: manavkhandurie/finsights:FrontendService-v1.0.0
+  port: 5000
+
+api:
+  domain: finsights.proddeploy.xyz
+
+cache:
+  timeout: 60
+
+letsencrypt:
+  clusterIssuerName: letsencrypt-prod
+  acmeServer: https://acme-v02.api.letsencrypt.org/directory
+  email: manavkhandurie@gmail.com
+  privateKeySecret: letsencrypt-prod
+  ingressClass: nginx
+
+tls:
+  secretName: finsights-prod-tls
+
+ingress:
+  className: nginx
+

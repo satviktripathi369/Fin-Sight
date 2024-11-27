@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-ingress-api-backend
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    cert-manager.io/cluster-issuer: {{ .Values.letsencrypt.clusterIssuerName }}  # Cert-manager annotation
+spec:
+  ingressClassName: {{ .Values.ingress.className }}
+  tls:
+  - hosts:
+    - {{ .Values.api.domain }}
+    secretName: {{ .Values.tls.secretName }}  # Secret to store SSL certificate
+  rules:
+  - host: {{ .Values.api.domain }}
+    http:
+      paths:
+      - path: /api(/|$)(.*)
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: {{ .Values.backend.name }}
+            port:
+              number: {{ .Values.backend.port }}
+

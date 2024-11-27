@@ -3,9 +3,14 @@ kind: Ingress
 metadata:
   name: app-ingress-api-backend
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2  # Rewrite for /api path
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    cert-manager.io/cluster-issuer: letsencrypt-prod  # Cert-manager annotation
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - finsights.proddeploy.xyz
+    secretName: finsights-prod-tls  # Secret to store SSL certificate
   rules:
   - host: finsights.proddeploy.xyz
     http:
