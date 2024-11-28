@@ -6,17 +6,17 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Manav-Khandurie/Fin-Sight.git 
+    repoURL: https://github.com/Manav-Khandurie/Fin-Sight.git
     targetRevision: main
     path: k8s/helm/finsights
     helm:
       valueFiles:
-        - values.yaml  # If you have custom Helm values
+        - values.yaml  # Includes your namespace and service configurations
   destination:
     server: https://kubernetes.default.svc  # Your Kubernetes cluster's API server
-    namespace: default
+    namespace: default  # Helm will override this with the namespace from values.yaml
   syncPolicy:
-    automated:  # Auto-sync the app
-      prune: true  # Automatically delete resources when they are removed from Git
-      selfHeal: true  # Automatically sync to Git repository state
+    automated:
+      prune: true
+      selfHeal: true
 
