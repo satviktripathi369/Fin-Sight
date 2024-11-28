@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: default
+  namespace: argocd
+spec:
+  description: Default project for Argo CD applications
+  # Optional: restrict the applications that can be managed in this project
+  destinations:
+    - namespace: '*'
+      server: https://kubernetes.default.svc
+  sourceRepos:
+    - '*'
+  clusterResourceWhitelist:
+    - group: cert-manager.io
+      kind: ClusterIssuer
+

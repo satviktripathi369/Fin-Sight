@@ -7,8 +7,12 @@ ml:
   port: 8000
 
 redis:
-  host: redis-cluster-master
-  port: 6379
+  architecture: standalone
+  auth:
+    enabled: false
+  fullnameOverride: redis-cluster
+  host: redis-cluster-master     
+  port: 6379                     
 
 backend:
   name: backend

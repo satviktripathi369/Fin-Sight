@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: finsights-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Manav-Khandurie/Fin-Sight.git
+    targetRevision: main
+    path: k8s/helm/finsights
+    helm:
+      valueFiles:
+        - values.yaml  # Includes your namespace and service configurations
+  destination:
+    server: https://kubernetes.default.svc  # Your Kubernetes cluster's API server
+    namespace: default  # Helm will override this with the namespace from values.yaml
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+

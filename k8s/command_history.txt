@@ -1,0 +1,1000 @@
+  570  kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.12.1/cert-manager.yaml
+  571  kubectl create -f cluster-issuer.yaml
+  572  kubectl create -f ml-deployment.yml
+  573  kubectl create -f ml-service.yml
+  574  kubectl create -f backend-cm.yml
+  575  kubectl create -f backend-deployment.yml
+  576  kubectl create -f backend-service.yml
+  577  kubectl create -f ingress-backend.yml
+  578  kubectl create -f frontend-cm.yml
+  579  kubectl create -f frontend-deployment.yml
+  580  kubectl create -f frontend-service.yml
+  581  kubectl create -f ingress-frontend.yml
+  582  cd Fin-Sight/
+  583  cd k8s
+  584  kubectl create -f cluster-issuer.yaml
+  585  kubectl create -f ml-deployment.yml
+  586  kubectl create -f ml-service.yml
+  587  kubectl create -f backend-cm.yml
+  588  kubectl create -f backend-deployment.yml
+  589  kubectl create -f backend-service.yml
+  590  kubectl create -f ingress-backend.yml
+  591  kubectl create -f frontend-cm.yml
+  592  kubectl create -f frontend-deployment.yml
+  593  kubectl create -f frontend-service.yml
+  594  kubectl create -f ingress-frontend.yml
+  595  kubectl get pods
+  596  cd Fin-Sight/k8s/
+  597  ls
+  598  kubectl get pods
+  599  kubectl get deployments
+  600  kubectl get ingress
+  601  kubectl get svc
+  602  kubectl get cm
+  603  kubectl get secret
+  604  kubectl describe cm backend-config
+  605  kubectl describe cm frontend-config
+  606  cat ingress-backend.yml 
+  607  git status
+  608  kubectl get pods
+  609  kubectl logs backend-75c47b9679-xd78g
+  610  kubectl logs backend-75c47b9679-qmlbb
+  611  kubectl logs backend-75c47b9679-wfmmq
+  612  kubectl logs backend-75c47b9679-qmlbb
+  613  kubectl logs backend-75c47b9679-xd78g
+  614  ls
+  615  vim ingress-backend.yml 
+  616  kubectl apply -f ingress-backend.yml 
+  617  vim ingress-frontend.yml 
+  618  kubectl apply -f ingress-frontend.yml 
+  619  kubectl get ingress
+  620  kubectl delete -f .
+  621  kubectl get pods
+  622  git status
+  623  kubectl create -f ml-deployment.yml
+  624  kubectl create -f ml-service.yml
+  625  kubectl create -f backend-cm.yml
+  626  kubectl create -f backend-deployment.yml
+  627  kubectl create -f backend-service.yml
+  628  kubectl create -f ingress-backend.yml
+  629  kubectl create -f frontend-cm.yml
+  630  kubectl create -f frontend-deployment.yml
+  631  kubectl create -f frontend-service.yml
+  632  kubectl create -f ingress-frontend.yml
+  633  kubectl get pods
+  634  kubectl delete -f .
+  635  git checkout -- .
+  636  git status
+  637  kubectl get svc -n ingress-nginx
+  638  kubectl get pods -n cert-manager
+  639  kubectl create -f cluster-issuer.yaml
+  640  kubectl create -f ml-deployment.yml
+  641  kubectl create -f ml-service.yml
+  642  kubectl create -f backend-cm.yml
+  643  kubectl create -f backend-deployment.yml
+  644  kubectl create -f backend-service.yml
+  645  kubectl create -f ingress-backend.yml
+  646  kubectl create -f frontend-cm.yml
+  647  kubectl create -f frontend-deployment.yml
+  648  kubectl create -f frontend-service.yml
+  649  kubectl create -f ingress-frontend.yml
+  650  kubectl get pods
+  651  kubectl get deployments
+  652  kubectl get pods
+  653  kubectl logs backend-75c47b9679-bgvrm
+  654  kubectl get pods
+  655  kubectl get nodes
+  656  kubectl describe pod backend-75c47b9679-llgkh
+  657  kubectl get pods
+  658  kubectl get deployments
+  659  kubectl get svc
+  660  kubectl get ingress
+  661  helm repo add bitnami https://charts.bitnami.com/bitnami
+  662  helm repo update
+  663  helm install redis-cluster bitnami/redis --set architecture=replication
+  664  helm uninstall redis-cluster
+  665  helm install redis-cluster bitnami/redis --set architecture=replication,auth.enabled=false
+  666  kubectl get pods
+  667  ls
+  668  vim backend-cm.yml 
+  669  kubectl apply -f backend-cm.yml 
+  670  kubectl delete -f backend-cm.yml 
+  671  kubectl delete -f backend-service.yml 
+  672  kubectl delete -f backend-deployment.yml 
+  673  kubectl create -f backend-cm.yml 
+  674  kubectl create -f backend-deployment.yml 
+  675  kubectl create -f backend-service.yml 
+  676  kubectl get pods
+  677  kubectl logs backend-75c47b9679-nddtj
+  678  git status
+  679  ls 
+  680  rm ingress-v1-bworking.yml 
+  681  rm ingress-v1-fworking.yml 
+  682  cd kops/
+  683  ls
+  684  vim kops-setup.sh 
+  685  ls
+  686  git status
+  687  cd ..
+  688  git status
+  689  git commit -m "WIP k8s part6"
+  690  git add .
+  691  git commit -m "WIP k8s part6"
+  692  git push origin master:master
+  693  helm create finsights
+  694  ls
+  695  cd finsights/
+  696  ls
+  697  cd templates/
+  698  ls
+  699  cat NOTES.txt 
+  700  cd ..
+  701  cp ingress-backend.yml ingress-frontend.yml ml-deployment.yml ml-servi
+  702  cp ingress-backend.yml ingress-frontend.yml ml-deployment.yml ml-service.yml  backend-cm.yml backend-deployment.yml backend-service.yml frontend-cm.yml  frontend-deployment.yml frontend-service.yml cluster-issuer.yaml  finsights/templates/
+  703  ls
+  704  cd finsights/
+  705  ls
+  706  cd templates/
+  707  ls
+  708  cd tests/
+  709  ls
+  710  cat test-connection.yaml 
+  711  cd ..
+  712  ls
+  713  kubectl logs backend-75c47b9679-nddtj
+  714  cd finsights/
+  715  ls
+  716  cd templates/
+  717  ls
+  718  rm deployment.yaml hpa.yaml serviceaccount.yaml service.yaml 
+  719  cat ingress.yaml 
+  720  rm ingress.yaml 
+  721  ls
+  722  cat ml-deployment.yml 
+  723  cat /dev/null > ml-deployment.yml 
+  724  vim ml-deployment.yml 
+  725  cat ml-service.yml 
+  726  cat /dev/null > ml-service.yml 
+  727  vim ml-service.yml 
+  728  cat backend-cm.yml 
+  729  cat /dev/null > backend-cm.yml 
+  730  vim backend-cm.yml 
+  731  cat backend-deployment.yml 
+  732  cat /dev/null > backend-deployment.yml 
+  733  vim backend-deployment.yml 
+  734  cat backend-service.yml 
+  735  cat /dev/null > backend-service.yml 
+  736  vim backend-service.yml 
+  737  cat backend-service.yml 
+  738  cat frontend-deployment.yml 
+  739  cat frontend-cm.yml 
+  740  cat /dev/null > frontend-cm.yml 
+  741  vim frontend-cm.yml 
+  742  cat frontend-deployment.yml 
+  743  cat /dev/null > frontend-deployment.yml 
+  744  vim frontend-deployment.yml 
+  745  cat frontend-service.yml 
+  746  cat /dev/null > frontend-service.yml 
+  747  vim frontend-service.yml 
+  748  cat /dev/null > frontend-service.yml 
+  749  vim frontend-service.yml 
+  750  ls
+  751  cat ingress-backend.yml 
+  752  cat cluster-issuer.yaml 
+  753  cat /dev/null > cluster-issuer.yaml 
+  754  vim cluster-issuer.yaml 
+  755  cat /dev/null > cluster-issuer.yaml 
+  756  vim cluster-issuer.yaml 
+  757  cat cluster-issuer.yaml 
+  758  cat ingress-backend.yml 
+  759  cat /dev/null > ingress-backend.yml 
+  760  vim ingress-backend.yml 
+  761  cat  ingress-backend.yml 
+  762  cat ingress-frontend.yml 
+  763  cat /dev/null > ingress-frontend.yml 
+  764  vim ingress-frontend.yml 
+  765  cat ingress-frontend.yml 
+  766  cat ingress-backend.yml 
+  767  cd ..
+  768  ls
+  769  cat Chart.yaml 
+  770  cat values.yaml 
+  771  cat /dev/null > values.yaml 
+  772  vim values.yaml 
+  773  helm install r1 ./finsights --dry-run
+  774  cd ..
+  775  helm install r1 ./finsights --dry-run
+  776  cd finsights/templates/
+  777  ls
+  778  rm -rf tests/*
+  779  ls
+  780  ls tests/
+  781  cd ..
+  782  helm install r1 ./finsights --dry-run
+  783  cd finsights/templates/
+  784  ls
+  785  cat _helpers.tpl 
+  786  rm NOTES.txt 
+  787  cd ..
+  788  helm install r1 ./finsights --dry-run
+  789  ls
+  790  kubectl delete -f .
+  791  kubectl get pods
+  792  helm list
+  793  helm
+  794  helm install r1 ./finsights --dry-run
+  795  ls
+  796  cd finsights/
+  797  ls
+  798  vim values.yaml 
+  799  cd ..
+  800  helm install r1 ./finsights --dry-run
+  801  helm install r1 ./finsights 
+  802  kubectl get pods
+  803  kubectl get ingress
+  804  kubectl get pods
+  805  kubectl logs frontend-d957b57b8-f4plc
+  806  kubectl logs backend-75c47b9679-nzxbf
+  807  kubectl get pods
+  808  kubectl logs ml-78765fdfbb-pkzcf
+  809  kubectl get svc
+  810  kubectl get pods
+  811  kubectl get deployments
+  812  kubectl get nodes
+  813  kubectl describe node i-04425447fbc1f26f2
+  814  kubectl get nodes
+  815  kubectl get deployments
+  816  kubectl get pods
+  817  kubectl get deployments
+  818  kubectl get pods
+  819  kubectl get deployments
+  820  i-04425447fbc1f26f2
+  821  helm status r1 --namespace default
+  822  cd finsights/
+  823  ls
+  824  cat templates/backend-cm.yml 
+  825  helm uninstall r1 --namespace default
+  826  helm list
+  827  cd Fin-Sight/k8s/
+  828  ls
+  829  cd finsights/
+  830  ls
+  831  cd templates/
+  832  ls
+  833  cat /dev/null > backend-cm.yml 
+  834  vim backend-cm.yml 
+  835  cd ..
+  836  helm install r1 ./finsights --dry-run
+  837  ls
+  838  cd finsights/
+  839  ls
+  840  cd templates/
+  841  cat backend-cm.yml 
+  842  cd ..
+  843  helm install r1 ./finsights --dry-run
+  844  cd finsights/templates/
+  845  ls
+  846  cat /dev/null > backend-cm.yml 
+  847  vim backend-cm.yml 
+  848  cd ..
+  849  helm install r1 ./finsights --dry-run
+  850  cd finsights/
+  851  cat values.yml
+  852  cat values.yaml 
+  853  helm template r1 .
+  854  cd ..
+  855  helm template r1 ./finsights
+  856  helm list
+  857  cd finsights/templates/
+  858  cat /dev/null > backend-cm.yml 
+  859  vim backend-cm.yml 
+  860  cd ..
+  861  helm template r1 . --debug
+  862  helm install r1 .
+  863  helm list
+  864  kubectl get deployments
+  865  kubectl get pods
+  866  kubectl get deployments
+  867  kubectl get pods
+  868  kubectl describe pod frontend-d957b57b8-lsm8r
+  869  kubectl get nodes
+  870  kubectl describe pod frontend-d957b57b8-lsm8r
+  871  kubectl get deployments
+  872  ls
+  873  cd Fin-Sight/
+  874  ls
+  875  cd k8s/
+  876  ls
+  877  mkdir kubernetes
+  878  touch kubernetes/.gitkeep
+  879  ls
+  880  mv *.* kubernetes/
+  881  ls
+  882  touch .gitkeep
+  883  ls
+  884  mv finsights helm/
+  885  ls
+  886  cd helm/
+  887  ls
+  888  ls -la
+  889  cd ..
+  890  cd kubernetes/
+  891  ls
+  892  mkdir load-balancers
+  893  mv frontend-lb.yml load-balancers/
+  894  mv backend-lb.yml load-balancers/
+  895  mv ml-lb.yml load-balancers/
+  896  ls
+  897  cd load-balancers/
+  898  ls
+  899  cd ..
+  900  cd helm/
+  901  ls
+  902  cd finsights/
+  903  ls
+  904  vim startup.sh
+  905  ls
+  906  cd ..
+  907  cd kops/
+  908  ls
+  909  cat kops-setup.sh 
+  910  touch user-data.sh
+  911  vim user-data.sh 
+  912  cat user-data.sh 
+  913  cd ..
+  914  git add .
+  915  git log
+  916  git commit -m "k8s part8"
+  917  git push origin master:master
+  918  git pull
+  919  kubectl
+  920  kubectl get pods
+  921  cd helm/finsights/
+  922  helm uninstall .
+  923  helm uninstall r1
+  924  kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0-beta.0/deploy/static/provider/aws/deploy.yaml
+  925  kubectl delete -f https://github.com/jetstack/cert-manager/releases/download/v1.12.1/cert-manager.yaml
+  926  kops delete cluster --name kube.proddeploy.xyz --state=s3://kopsstatebucketmanav --yes
+  927  exit
+  928  cd Fin-Sight/
+  929  cd k8s/
+  930  ls
+  931  heml list
+  932  helm list
+  933  helm
+  934  helm status r1
+  935  kubectl get deployments
+  936  ls
+  937  mkdir helm
+  938  touch helm/.gitkeep
+  939  git add .
+  940  git log
+  941  git status
+  942  git commit -m "WIP k8s part7"
+  943  git push origin master:master
+  944  ls
+  945  cd finsights/
+  946  ls
+  947  helm uninstall r1
+  948  kubectl get pods
+  949  kubectl get pods -n cert-manager
+  950  ls
+  951  cd templates/
+  952  vim cert-manager-hook.yaml
+  953  vim redis-cluster-hook.yaml
+  954  git status
+  955  helm list
+  956  helm uninstall redis-cluster
+  957  kubectl get pods
+  958  kubectl delete -f https://github.com/jetstack/cert-manager/releases/download/v1.12.1/cert-manager.yaml
+  959  kubectl get ns
+  960  cd ..
+  961  ls
+  962  helm install r1 .
+  963  helm list
+  964  cd templates/
+  965  cat /dev/null > cert-manager-hook.yaml 
+  966  cat cert-manager-hook.yaml 
+  967  vim cert-manager-hook.yaml 
+  968  cd ..
+  969  helm install r1 .
+  970  ls
+  971  cd templates/
+  972  ls
+  973  rm cert-manager-hook.yaml 
+  974  cd ..
+  975  helm install r1 .
+  976  cd templates/
+  977  vim cert-manager-crds-hook.yaml
+  978  cd ..
+  979  helm install r1 .
+  980  kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.12.1/cert-manager.crds.yaml
+  981  kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.12.1/cert-manager.yaml
+  982  kubectl get crds | grep cert-manager
+  983  helm install r1 .
+  984  ls
+  985  cd templates/
+  986  ls
+  987  rm cert-manager-crds-hook.yaml 
+  988  cd ..
+  989  helm install r1 .
+  990  kubectl get pods
+  991  helm uninstall r1 
+  992  helm install r1 .
+  993  helm list
+  994  helm status r1
+  995  helm uninstall r1
+  996  cd templates/
+  997  ls
+  998  rm redis-cluster-hook.yaml 
+  999  cd ..
+ 1000  helm install r1 .
+ 1001  helm status r1
+ 1002  helm get deployments
+ 1003  kubectl get deployments
+ 1004  kubectl get ns
+ 1005  git status
+ 1006  vim values.yaml 
+ 1007  car Chart.yaml 
+ 1008  cat Chart.yaml 
+ 1009  vim Chart.yaml 
+ 1010  history
+ 1011  helm template r1 .
+ 1012  helm install r1 . --dry-run
+ 1013  helm dependency build
+ 1014  cat Chart.yaml 
+ 1015  helm search repo bitnami/redis --versions
+ 1016  vim Chart.yaml 
+ 1017  helm list
+ 1018  helm uninstall r1
+ 1019  helm dependency build
+ 1020  helm install r1 .
+ 1021  kubectl get deployments
+ 1022  kubectl get pods
+ 1023  kubectl describe pod r1-redis-master-0
+ 1024  kubectl get deployments
+ 1025  kubectl get ns
+ 1026  kubectl get nodes
+ 1027  kubectl get pods
+ 1028  kubectl describe pod redis-cluster-install-b594p
+ 1029  helm status r1
+ 1030  kubectl get pods
+ 1031  kubectl logs backend-75c47b9679-48ntw
+ 1032  kubectl logs backend-75c47b9679-l7lkf
+ 1033  kubectl logs backend-75c47b9679-v8l8s
+ 1034  kubectl logs backend-75c47b9679-l7lkf
+ 1035  kubectl get pods
+ 1036  kubectl logs r1-redis-master-0
+ 1037  kubectl logs redis-cluster-install-ljv4n
+ 1038  helm unsinstall r1
+ 1039  helm uninstall r1
+ 1040  kubectl delete -f https://github.com/jetstack/cert-manager/releases/download/v1.12.1/cert-manager.yaml
+ 1041  kubectl get ns
+ 1042  ls
+ 1043  helm install r1 . --dry-run
+ 1044  kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.12.1/cert-manager.yaml
+ 1045  helm install r1 . --dry-run
+ 1046  ls
+ 1047  vim Chart.
+ 1048  helm uninstall r1
+ 1049  vim Chart.yaml 
+ 1050  helm install r1 . --dry-run
+ 1051  helm dependency build
+ 1052  cat values.yaml 
+ 1053  cat Chart.
+ 1054  cat Chart.yaml 
+ 1055  cat /dev/null > Chart.
+ 1056  cat /dev/null > Chart.yaml 
+ 1057  vim Chart.yaml 
+ 1058  cat /dev/null > values.yaml 
+ 1059  vim values.yaml 
+ 1060  kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0-beta.0/deploy/static/provider/aws/deploy.yaml
+ 1061  cat values.yaml 
+ 1062  helm dependency build
+ 1063  ls
+ 1064  ls -la
+ 1065  rm Chart.
+ 1066  rm Chart.lock 
+ 1067  helm dependency build
+ 1068  helm install finsights ./ --values values.yaml
+ 1069  kubectl get ns
+ 1070  kubectl get pods
+ 1071  kubectl logs backend-75c47b9679-2kkqr
+ 1072  kubectl get deployments
+ 1073  kubectl get ns
+ 1074  kubectl get deployments
+ 1075  helm uninstall r1
+ 1076  helm list
+ 1077  helm uninstall finsights
+ 1078  git status
+ 1079  git checkout --
+ 1080  cat Chart.
+ 1081  cat Chart.yaml 
+ 1082  cat values.yaml 
+ 1083  git checkout -- .
+ 1084  git status
+ 1085  cat Chart.yaml 
+ 1086  kubectl get ns
+ 1087  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0-beta.0/deploy/static/provider/aws/deploy.yaml
+ 1088  kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.12.1/cert-manager.yaml
+ 1089  ls
+ 1090  rm Chart.lock 
+ 1091  ls
+ 1092  helm install r1 .
+ 1093  cat values.yaml 
+ 1094  helm list
+ 1095  kubectl get ns
+ 1096  helm install r1 .
+ 1097  kubectl get ingressclass
+ 1098  kubectl delete ingressclass nginx
+ 1099  helm install r1 .
+ 1100  helm uninstall r1 .
+ 1101  helm uninstall r1 
+ 1102  helm uninstall r1
+ 1103  helm list
+ 1104  kubectl get ns
+ 1105  kubectl get all -n ingress-nginx
+ 1106  ls
+ 1107  cat Chart.yaml 
+ 1108  cat values.yaml 
+ 1109  helm install . --dry-run
+ 1110  helm install r1 . --dry-run
+ 1111  cd templates/
+ 1112  ls
+ 1113  cd ..
+ 1114  ls
+ 1115  helm dependency build
+ 1116  helm install r1 . --dry-run
+ 1117  ls -la
+ 1118  cat .helmignore 
+ 1119  cd templates/
+ 1120  ls -la
+ 1121  cd tests/
+ 1122  ls
+ 1123  cd ..
+ 1124  cat ingress-backend.yml 
+ 1125  helm list
+ 1126  git status
+ 1127  cd ..
+ 1128  ls
+ 1129  git clone -b master https://github.com/Manav-Khandurie/Fin-Sight.git
+ 1130  cd Fin-Sight/
+ 1131  ls
+ 1132  cd k8s/
+ 1133  ls
+ 1134  cd finsights/
+ 1135  helm list
+ 1136  helm install r1 .
+ 1137  kubectl get ns
+ 1138  kubectl get pods
+ 1139  kubectl get svc
+ 1140  kubectl get deployments
+ 1141  helm install r1 . --dry-run
+ 1142  helm template r1
+ 1143  history
+ 1144  kubectl get pods
+ 1145  kubectl get deployments
+ 1146  kubectl get ingress
+ 1147  kubectl get cm
+ 1148  kubectl get svc
+ 1149  curl 100.71.129.204
+ 1150  kubectl get deployments
+ 1151  kubectl get ingress
+ 1152  kubectl get ingress -o wide
+ 1153  kubectl get ingress -o wide -n ingress-nginx
+ 1154  kubectl get svc -o wide -n ingress-nginx
+ 1155  kubectl get pods
+ 1156  kubectl get nginx
+ 1157  kubectl get ingress
+ 1158  kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0-beta.0/deploy/static/provider/aws/deploy.yaml
+ 1159  kubectl get ns
+ 1160  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0-beta.0/deploy/static/provider/aws/deploy.yaml
+ 1161  kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0-beta.0/deploy/static/provider/aws/deploy.yaml
+ 1162  history
+ 1163  kubectl get ns
+ 1164  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0-beta.0/deploy/static/provider/aws/deploy.yaml
+ 1165  ls
+ 1166  cd Fin-Sight/
+ 1167  git status
+ 1168  kops create cluster --name=kube.proddeploy.xyz --state=s3://kopsstatebucketmanav --zones=us-east-1a,us-east-1b --node-count=2 --node-size=t3.small --master-size=t3.medium --dns-zone=kube.proddeploy.xyz --node-volume-size=8 --master-volume-size=8
+ 1169  kops update cluster --name kube.proddeploy.xyz --state=s3://kopsstatebucketmanav --yes --admin
+ 1170  kops validate cluster --state=s3://kopsstatebucketmanav
+ 1171  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0-beta.0/deploy/static/provider/aws/deploy.yaml
+ 1172  kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.12.1/cert-manager.yaml
+ 1173  ls
+ 1174  cd k8s/helm/finsights/
+ 1175  ls
+ 1176  helm install r1 .
+ 1177  helm status r1
+ 1178  kubectl get deployments
+ 1179  kubectl get secret
+ 1180  kubectl get deployments
+ 1181  helm
+ 1182  helm show r1
+ 1183  kubectl get deployments
+ 1184  kubectl get replicas
+ 1185  kubectl get replica
+ 1186  kubectl get ingress
+ 1187  kubectl get deployments
+ 1188  kubectl get ns
+ 1189  kubectl get all -n ingress-nginx
+ 1190  history
+ 1191  kubectl get all -n ingress-nginx
+ 1192  kubectl get svc
+ 1193  ls
+ 1194  kubectl logs pod/ingress-nginx-controller-587b6bf64f-ndtfr
+ 1195  kubectl logs pod/ingress-nginx-controller-587b6bf64f-ndtfr -n ingress-nginx
+ 1196  kubectl get all -n ingress-nginx
+ 1197  kubectl get deployment -n ingress-nginx
+ 1198  kubectl get nodes
+ 1199  kubectl top nodes
+ 1200  kubectl get nodes -o json | jq '.items[] | {name: .metadata.name, capacity: .status.capacity, allocatable: .status.allocatable}'
+ 1201  kubectl get nodes -o custom-columns=NAME:.metadata.name,CPU:.status.capacity.cpu,MEMORY:.status.capacity.memory
+ 1202  helm uninstall r1
+ 1203  vim Chart.yaml 
+ 1204  helm dependency update
+ 1205  cat values.yaml 
+ 1206  cat templates/backend-cm.yml 
+ 1207  cd ..
+ 1208  cd finsights/
+ 1209  vim values.yaml 
+ 1210  ls
+ 1211  ls -la
+ 1212  helm install r1 . --namespace default
+ 1213  helm list -n default
+ 1214  kubectl get deployments 
+ 1215  helm status r1
+ 1216  kubectl get pods
+ 1217  kubectl logs backend-75c47b9679-47zqq
+ 1218  kubectl get pods
+ 1219  kubectl logs backend-75c47b9679-47zqq
+ 1220  kubectl logs backend-75c47b9679-4rzkv
+ 1221  kubectl get logs
+ 1222  kubectl get logs backend-75c47b9679-5tdpc
+ 1223  kubectl logs backend-75c47b9679-5tdpc
+ 1224  kubectl logs backend-75c47b9679-4rzkv
+ 1225  kubectl logs backend-75c47b9679-47zqq
+ 1226  helm uninstall r1
+ 1227  helm template finsights ./finsights --namespace default
+ 1228  helm template finsights . --namespace default
+ 1229  vim values.yaml 
+ 1230  kubectl get ds
+ 1231  kubectl get dp
+ 1232  kubectl get deployments
+ 1233  vim values.yaml 
+ 1234  helm install r1 . --dry-run
+ 1235  helm install r1 .
+ 1236  kubectl get ds
+ 1237  kubectl get deployments
+ 1238  kubectl get all -n ingress-nginx
+ 1239  kubectl get deployments
+ 1240  kubectl get pods
+ 1241  kubectl logs backend-75c47b9679-j99kr
+ 1242  kubectl logs backend-75c47b9679-pxljv
+ 1243  kubectl logs backend-75c47b9679-tqz8v
+ 1244  kubectl logs backend-75c47b9679-pxljv
+ 1245  kubectl get svc -n default | grep redis
+ 1246  kubectl get pods -n default | grep redis
+ 1247  kubectl logs -n default redis-cluster-master-0
+ 1248  kubectl exec -it backend-75c47b9679-pxljv -n default -- sh
+ 1249  kubectl exec -it backend-75c47b9679-pxljv -n default -- env | grep REDIS
+ 1250  kubectl run redis-debug --rm -it --image=alpine --restart=Never -- sh
+ 1251  kube
+ 1252  kubectl run redis-cli --rm -it --image=redis --restart=Never -- bash
+ 1253  kubectl logs backend-75c47b9679-tqz8v
+ 1254  kubectl logs backend-75c47b9679-pxljv
+ 1255  kubectl logs backend-75c47b9679-j99kr
+ 1256  kubectl logs backend-75c47b9679-pxljv
+ 1257  kubectl logs backend-75c47b9679-tqz8v
+ 1258  kubectl logs backend-75c47b9679-j99kr
+ 1259  kubectl logs backend-75c47b9679-tqz8v
+ 1260  kubectl logs backend-75c47b9679-pxljv
+ 1261  kubectl logs backend-75c47b9679-tqz8v
+ 1262  kubectl rollout restart deployment backend -n default
+ 1263  kubectl get deployments
+ 1264  kubectl get logs backend
+ 1265  kubectl logs backend
+ 1266  kubectl get pods
+ 1267  kubectl logs backend-747676c965-769qs
+ 1268  kubectl get pods --all-namespaces --field-selector=status.phase=Running | wc -l
+ 1269  kubectl uninstall rq
+ 1270  kubectl uninstall r1
+ 1271  helm uninstall r1
+ 1272  helm list
+ 1273  git status
+ 1274  git logs 
+ 1275  git logs
+ 1276  git log
+ 1277  git commit -m "WIP k8s part9"
+ 1278  git add .
+ 1279  git commit -m "WIP k8s part9"
+ 1280  git push origin master:master 
+ 1281  helm list
+ 1282  # Add the Argo CD Helm repo
+ 1283  helm repo add argo https://argoproj.github.io/argo-helm
+ 1284  helm repo update
+ 1285  # Install Argo CD into the `argocd` namespace
+ 1286  helm install argocd argo/argo-cd --namespace argocd --create-namespace
+ 1287  ls
+ 1288  cd ..
+ 1289  ls
+ 1290  cd ..
+ 1291  ls
+ 1292  mkdir argoCD
+ 1293  touch argoCD/.gitkeep
+ 1294  cd argoCD/
+ 1295  ls
+ 1296  touch argo-cd-repo.yaml
+ 1297  vim argo-cd-repo.yaml 
+ 1298  vim argo-cd-app.yaml
+ 1299  cat argo-cd-app.yaml 
+ 1300  cat argo-cd-repo.yaml 
+ 1301  kubectl apply -f argo-cd-repo.yaml
+ 1302  kubectl apply -f argo-cd-app.yaml
+ 1303  argocd app get finsights-app
+ 1304  kubectl get application
+ 1305  kubectl get applications
+ 1306  kubectl get ns
+ 1307  kubectl get all -n argocd
+ 1308  kubectl get deployments
+ 1309  kubectl get pods
+ 1310  kubectl logs frontend-d957b57b8-7pmtj
+ 1311  kubectl get pods
+ 1312  kubectl get deployments
+ 1313  kubectl get pods
+ 1314  kubectl logs redis-cluster-master-0
+ 1315  kubectl get deployments
+ 1316  kubectl get pods
+ 1317  kubectl get deployments
+ 1318  kubectl logs backend-75c47b9679-bh9lw
+ 1319  kubectl logs backend-75c47b9679-tklkm
+ 1320  kubectl logs backend-75c47b9679-wnt6p
+ 1321  kubectl logs backend-75c47b9679-tklkm
+ 1322  kubectl logs backend-75c47b9679-bh9lw
+ 1323  history
+ 1324  helm list
+ 1325  kubectl rollout restart deployment backend -n default
+ 1326  kubectl get deployments
+ 1327  kubectl get pods
+ 1328  kubectl get logs backend-8f644bf7d-6qvn9
+ 1329  kubectl logs backend-8f644bf7d-6qvn9
+ 1330  argocd app get finsights-app
+ 1331  kubectl get applications -n argocd
+ 1332  # Download the latest version (adjust version if needed)
+ 1333  curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/download/v2.7.5/argocd-linux-amd64
+ 1334  # Make it executable
+ 1335  chmod +x argocd-linux-amd64
+ 1336  # Move the binary to a directory in your PATH (e.g., /usr/local/bin)
+ 1337  sudo mv argocd-linux-amd64 /usr/local/bin/argocd
+ 1338  argocd app get finsights-app
+ 1339  argocd version
+ 1340  cat argo-cd-repo.yaml 
+ 1341  cat argo-cd-app.yaml 
+ 1342  kubectl delete -f argo-cd-app.yaml
+ 1343  kubectl get deployments
+ 1344  helm list
+ 1345  kubectl delete -f argo-cd-app.yaml
+ 1346  kubectl get deployments
+ 1347  git add .
+ 1348  git status
+ 1349  cd ..
+ 1350  git add .
+ 1351  git status
+ 1352  git commit -m "WIP k8s part10"
+ 1353  git push origin master:master
+ 1354  git pull
+ 1355  git pull origin master
+ 1356  git push origin master:master
+ 1357  git pull
+ 1358  git push origin master:master
+ 1359  git config pull.rebase false
+ 1360  git push origin master:master
+ 1361  ls
+ 1362  pwd
+ 1363  cp argoCD /home/ubuntu/
+ 1364  cp -r argoCD /home/ubuntu/
+ 1365  cd ..
+ 1366  ls
+ 1367  rm -rf Fin-Sight/
+ 1368  git clone -b master https://github.com/Manav-Khandurie/Fin-Sight
+ 1369  mv argoCD Fin-Sight/k8s/
+ 1370  ls
+ 1371  cd Fin-Sight/
+ 1372  ls
+ 1373  cd k8s/
+ 1374  ls
+ 1375  cd argoCD/
+ 1376  ls
+ 1377  cd ..
+ 1378  git add .
+ 1379  git status
+ 1380  git commit -m "WIP k8s part10"
+ 1381  git push origin master:master
+ 1382  ls
+ 1383  kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0-beta.0/deploy/static/provider/aws/deploy.yaml
+ 1384  .
+ 1385  kubectl get deployments
+ 1386  kubectl delete -f https://github.com/jetstack/cert-manager/releases/download/v1.12.1/cert-manager.yaml
+ 1387  kops get cluster --state=s3://kopsstatebucketmanav
+ 1388  kops delete cluster --name kube.proddeploy.xyz --state=s3://kopsstatebucketmanav --yes
+ 1389  git status
+ 1390  git pull
+ 1391  git pull origin master
+ 1392  history
+ 1393  exit
+ 1394  kops create cluster --name=kube.proddeploy.xyz --state=s3://kopsstatebucketmanav --zones=us-east-1a,us-east-1b --node-count=2 --node-size=t3.small --master-size=t3.medium --dns-zone=kube.proddeploy.xyz --node-volume-size=8 --master-volume-size=8
+ 1395  kops update cluster --name kube.proddeploy.xyz --state=s3://kopsstatebucketmanav --yes --admin
+ 1396  ls
+ 1397  cd Fin-Sight/k8s/kops/
+ 1398  ls
+ 1399  cp kops-setup.sh start-up.sh
+ 1400  mv kops-setup.sh all-commands.sh
+ 1401  ls -la
+ 1402  cat /dev/null > start-up.sh 
+ 1403  vim start-up.sh 
+ 1404  cp start-up.sh destroy.sh
+ 1405  vim destroy.sh 
+ 1406  vim all-commands.sh 
+ 1407  git add .
+ 1408  touch .gitkeep
+ 1409  vim user-data.sh 
+ 1410  ls -la
+ 1411  git add .
+ 1412  ls
+ 1413  vim start-up.sh 
+ 1414  git add .
+ 1415  cd ..
+ 1416  cd helm/
+ 1417  ls 
+ 1418  cd finsights/
+ 1419  ls
+ 1420  vim startup.sh 
+ 1421  cd ..
+ 1422  cd argoCD/
+ 1423  ls
+ 1424  touch start-up.sh
+ 1425  vim start-up.sh 
+ 1426  ls 
+ 1427  vim start-up.sh 
+ 1428  git add .
+ 1429  cd ..
+ 1430  git add .
+ 1431  ls -la
+ 1432  cd kubernetes/
+ 1433  ls
+ 1434  vim start-up.sh
+ 1435  cd ..
+ 1436  cd helm/
+ 1437  ls
+ 1438  cd finsights/
+ 1439  cat startup.sh 
+ 1440  cd ..
+ 1441  cd k
+ 1442  cd kubernetes/
+ 1443  ls
+ 1444  touch start-up.sh
+ 1445  vim start-up.sh 
+ 1446  cd ..
+ 1447  git add .
+ 1448  git status
+ 1449  git commit -m "setup.sh added & updated scripts"
+ 1450  git push origin master:master
+ 1451  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0-beta.0/deploy/static/provider/aws/deploy.yaml
+ 1452  cd argoCD/
+ 1453  ls
+ 1454  cat /dev/null > argo-cd-app.yaml 
+ 1455  vim argo-cd-app.yaml 
+ 1456  chmod 740 start-up.sh 
+ 1457  ls -la
+ 1458  cat start-up.sh 
+ 1459  sudo ./start-up.sh 
+ 1460  kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.12.1/cert-manager.yaml
+ 1461  kubectl get ns
+ 1462  kubectl apply -f argo-cd-repo.yaml
+ 1463  kubectl apply -f argo-cd-app.yaml
+ 1464  cat argo-cd-app.yaml 
+ 1465  kubectl get ns
+ 1466  kubectl create namespace argocd
+ 1467  kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+ 1468  kubectl apply -f argo-cd-repo.yaml
+ 1469  kubectl apply -f argo-cd-app.yaml
+ 1470  cd ..
+ 1471  cd helm/
+ 1472  helm lint ./finsights/
+ 1473  argocd app list
+ 1474  argocd app get finsights-app
+ 1475  kubectl logs -n argocd deployment/argocd-application-controller
+ 1476  kubectl get ns
+ 1477  kubectl get deployments
+ 1478  kubectl get application
+ 1479  kubectl get application -n argocd
+ 1480  kubectl get all -n ingress-nginx
+ 1481  cd ..
+ 1482  cd argoCD/
+ 1483  cat argo-cd-app.yaml 
+ 1484  argocd app get finsights-app
+ 1485  kubectl get applications -n argocd
+ 1486  kubectl describe application finsights-app -n argocd
+ 1487  ls
+ 1488  vim argo-cd-repo.yaml 
+ 1489  kubectl apply -f argo-cd-repo.yaml 
+ 1490  kubectl describe application finsights-app -n argocd
+ 1491  kubectl get applications -n argocd
+ 1492  argocd app sync finsights-app
+ 1493  kubectl logs deployment/argocd-application-controller -n argocd
+ 1494  kubectl get applications -n argocd
+ 1495  kubectl logs deployment/argocd-application-controller -n argocd
+ 1496  kubectl describe application finsights-app -n argocd
+ 1497  kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0-beta.0/deploy/static/provider/aws/deploy.yaml
+ 1498  kubectl get ns
+ 1499  kops delete cluster --name kube.proddeploy.xyz --state=s3://kopsstatebucketmanav --yes
+ 1500  ls
+ 1501  cd Fin-Sight/
+ 1502  ls
+ 1503  kops create cluster --name=kube.proddeploy.xyz --state=s3://kopsstatebucketmanav --zones=us-east-1a,us-east-1b --node-count=2 --node-size=t3.small --master-size=t3.medium --dns-zone=kube.proddeploy.xyz --node-volume-size=8 --master-volume-size=8
+ 1504  kops update cluster --name kube.proddeploy.xyz --state=s3://kopsstatebucketmanav --yes --admin
+ 1505  kubectl get nodes
+ 1506  kops validate cluster --state=s3://kopsstatebucketmanav --wait 10m
+ 1507  kops validate cluster --state=s3://kopsstatebucketmanav
+ 1508  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0-beta.0/deploy/static/provider/aws/deploy.yaml
+ 1509  kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.12.1/cert-manager.yaml
+ 1510  ls
+ 1511  helm 
+ 1512  cd k8s/helm/
+ 1513  ls
+ 1514  cd finsights/
+ 1515  ls
+ 1516  helm install
+ 1517  helm build dependency
+ 1518  helm build 
+ 1519  history
+ 1520  helm dependency update
+ 1521  helm install r1 ..
+ 1522  helm install r1 .
+ 1523  helm list
+ 1524  kubectl get deployments
+ 1525  kubectl get ingress
+ 1526  kubectl get secret
+ 1527  kubectl get cm
+ 1528  kubectl get deployments
+ 1529  kubectl get pods
+ 1530  kubectl get deployments
+ 1531  kubectl logs ml-78765fdfbb-dm7pm
+ 1532  kubectl get deployments
+ 1533  kubectl get all -n ingress-nginx
+ 1534  kubectl get nodes
+ 1535  helm status r1
+ 1536  kubectl get deployments
+ 1537  kubectl get pods
+ 1538  kubectl logs backend-75c47b9679-j4jbb
+ 1539  kubectl get deployments
+ 1540  kubectl get all -n ingress-nginx
+ 1541  kubectl logs -n ingress-nginx pod/ingress-nginx-admission-patch-8v8sh
+ 1542  kubectl get all -n ingress-nginx
+ 1543  kubectl get pods
+ 1544  kubectl get deployments
+ 1545  helm list
+ 1546  kubectl get ingress
+ 1547  kubectl get secret
+ 1548  kubectl get svc
+ 1549  helm status r1
+ 1550  kubectl get pods
+ 1551  kubectl get 
+ 1552  kubectl get nodes
+ 1553  kubectl logs cm-acme-http-solver-5qczg
+ 1554  kubectl get pods
+ 1555  kubectl logs Helm for Resource Management
+ 1556  Used Helm to define, install, and manage Kubernetes resources, enabling version-controlled, reproducible infrastructure setups.======
+ 1557  kubectl logs backend-75c47b9679-55t8w
+ 1558  kubectl rollout restart deployment backend
+ 1559  kubectl get deployments
+ 1560  kubectl get pods
+ 1561  kubectl logs backend-6b84b55445-8wbvn
+ 1562  kubectl get deployments
+ 1563  kubectl logs frontend-d957b57b8-lkckj
+ 1564  kubectl get deployments
+ 1565  kubectl get svc
+ 1566  cd ..
+ 1567  ls
+ 1568  touch history.txt
+ 1569  history > history.txt
