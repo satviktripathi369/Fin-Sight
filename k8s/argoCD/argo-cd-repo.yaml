@@ -11,4 +11,7 @@ spec:
       server: https://kubernetes.default.svc
   sourceRepos:
     - '*'
+  clusterResourceWhitelist:
+    - group: cert-manager.io
+      kind: ClusterIssuer
 

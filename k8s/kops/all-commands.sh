@@ -4,7 +4,7 @@ kops create cluster --name=kube.proddeploy.xyz --state=s3://kopsstatebucketmanav
 
 kops update cluster --name kube.proddeploy.xyz --state=s3://kopsstatebucketmanav --yes --admin
 
-kops validate cluster --state=s3://kopsstatebucketmanav
+kops validate cluster --state=s3://kopsstatebucketmanav --wait 10m
 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0-beta.0/deploy/static/provider/aws/deploy.yaml
 
@@ -38,4 +38,6 @@ kubectl create -f frontend-service.yml
 
 kubectl create -f ingress-frontend.yml
 
+kops get cluster --state=s3://kopsstatebucketmanav
 
+kops delete cluster --name kube.proddeploy.xyz --state=s3://kopsstatebucketmanav --yes  

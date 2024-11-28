@@ -2,4 +2,4 @@
 
 kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.12.1/cert-manager.yaml
 
-helm install r1 .
+kubectl create -f .
